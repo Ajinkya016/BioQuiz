@@ -1,5 +1,4 @@
 # BioQuiz
-Biology Quiz By Ajinkya
 Dear ma'am,
 you will have click on the given button above having written "code" on it and select download zip option.
 it will download a zip file in it, you will have to extract it to the
