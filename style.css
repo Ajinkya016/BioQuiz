@@ -7,13 +7,29 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background: #007bff;
+body::before {
+    content: "";
+
+    background: linear-gradient(  45deg,
+
+                                  #eae320     0%,
+                                  #12dc3e   100%
+                              );
+
+    top:    0;
+    bottom: 0;
+    left:   0;
+    right:  0;
+    animation: bganim 10s ease infinite;
+    background-size: 400% 400%;
+    position: fixed;
+
+    z-index: -1;
 }
 
 ::selection{
     color: #fff;
-    background: #007bff;
+    background: #12dc3e;
 }
 
 .start_btn,
@@ -40,7 +56,7 @@ body{
 .start_btn button{
     font-size: 25px;
     font-weight: 500;
-    color: #007bff;
+    color: #12dc3e;
     padding: 15px 30px;
     outline: none;
     border: none;
@@ -82,7 +98,7 @@ body{
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color: #007bff;
+    color: #12dc3e;
 }
 .info_box .buttons{
     height: 60px;
@@ -103,7 +119,7 @@ body{
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #12dc3e;
     transition: all 0.3s ease;
 }
 
@@ -136,7 +152,7 @@ body{
 }
 
 .quiz_box header .timer{
-    color: #004085;
+    color: #00831d;
     background: #cce5ff;
     border: 1px solid #b8daff;
     height: 45px;
@@ -173,7 +189,7 @@ body{
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: #007bff;
+    background: #12dc3e;
 }
 
 section{
@@ -210,9 +226,9 @@ section .option_list .option:last-child{
 }
 
 section .option_list .option:hover{
-    color: #004085;
+    color: #08af2c;
     background: #cce5ff;
-    border: 1px solid #b8daff;
+    border: 1px solid #b8ffc0;
 }
 
 section .option_list .option.correct{
@@ -287,8 +303,8 @@ footer button{
     outline: none;
     color: #fff;
     border-radius: 5px;
-    background: #007bff;
-    border: 1px solid #007bff;
+    background: #12dc3e;
+    border: 1px solid #12dc3e;
     line-height: 10px;
     opacity: 0;
     pointer-events: none;
@@ -297,7 +313,7 @@ footer button{
 }
 
 footer button:hover{
-    background: #0263ca;
+    background: #08af2c;
 }
 
 footer button.show{
@@ -323,7 +339,7 @@ footer button.show{
 
 .result_box .icon{
     font-size: 100px;
-    color: #007bff;
+    color: #12dc3e;
     margin-bottom: 10px;
 }
 
@@ -359,25 +375,46 @@ footer button.show{
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #12dc3e;
     transition: all 0.3s ease;
 }
 
+/* The alert message box */
+/* #alert {
+    padding: 0;
+    background-color: #f44336; /* Red
+    color: white;
+    margin: 10px 0;
+    height:0;
+}
+   */
+
 .buttons button.restart{
     color: #fff;
-    background: #007bff;
+    background: #12dc3e;
 }
 
 .buttons button.restart:hover{
-    background: #0263ca;
+    background: #08af2c;
 }
 
 .buttons button.quit{
-    color: #007bff;
+    color: #12dc3e;
     background: #fff;
 }
 
 .buttons button.quit:hover{
     color: #fff;
-    background: #007bff;
+    background: #12dc3e;
+}
+@keyframes bganim {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
